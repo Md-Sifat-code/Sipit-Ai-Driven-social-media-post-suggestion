@@ -9,6 +9,8 @@ import DashboardLayout from "../Layout/DashboardLayout";
 import DashboardHome from "../pages/DashboardPages/DashboardHome";
 import DashboardCommunity from "../pages/DashboardPages/DashboardCommunity";
 import DashboardPAckageandPricing from "../pages/DashboardPages/DashboardPAckageandPricing";
+import DasboardDisclaimer from "../pages/DashboardPages/DasboardDisclaimer";
+import DashboardSupportCenter from "../pages/DashboardPages/DashboardSupportCenter";
 
 const routes = createBrowserRouter([
   {
@@ -39,7 +41,16 @@ const routes = createBrowserRouter([
     },
     {
       path : "/dashboard/disclaimer",
+
       element : <DashboardCommunity></DashboardCommunity>
+
+      element : <DasboardDisclaimer/>
+
+    },
+    {
+      path : "/dashboard/support",
+      element : <DashboardSupportCenter/>
+
     }
   ]
   },
