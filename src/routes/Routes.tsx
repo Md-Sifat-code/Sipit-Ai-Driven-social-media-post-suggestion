@@ -39,7 +39,7 @@ const routes = createBrowserRouter([
     },
     {
       path : "/dashboard/disclaimer",
-      element : <D
+      element : <DashboardCommunity></DashboardCommunity>
     }
   ]
   },
