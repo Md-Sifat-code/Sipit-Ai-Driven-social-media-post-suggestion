@@ -1,6 +1,5 @@
 import { createBrowserRouter } from "react-router-dom";
 
-
 import NotFound from "../pages/NotFound";
 
 import Home from "../pages/Home";
@@ -18,41 +17,37 @@ const routes = createBrowserRouter([
     element: <MainLayout />,
     children: [
       {
-        path : "/",
-        element : <Home/>
-      }
-    ]
-      
+        path: "/",
+        element: <Home />,
+      },
+    ],
   },
   {
-    path : "/dashboard",
-    element : <DashboardLayout/>,
-    children : [{
-      path : "/dashboard",
-      element : <DashboardHome/>
-    },
-    {
-      path : "/dashboard/community",
-      element : <DashboardCommunity></DashboardCommunity>
-    },
-    {
-      path : "/dashboard/package",
-      element : <DashboardPAckageandPricing/>
-    },
-    {
-      path : "/dashboard/disclaimer",
+    path: "/dashboard",
+    element: <DashboardLayout />,
+    children: [
+      {
+        path: "/dashboard",
+        element: <DashboardHome />,
+      },
+      {
+        path: "/dashboard/community",
+        element: <DashboardCommunity></DashboardCommunity>,
+      },
+      {
+        path: "/dashboard/package",
+        element: <DashboardPAckageandPricing />,
+      },
+      {
+        path: "/dashboard/disclaimer",
 
-      element : <DashboardCommunity></DashboardCommunity>
-
-      element : <DasboardDisclaimer/>
-
-    },
-    {
-      path : "/dashboard/support",
-      element : <DashboardSupportCenter/>
-
-    }
-  ]
+        element: <DasboardDisclaimer />,
+      },
+      {
+        path: "/dashboard/support",
+        element: <DashboardSupportCenter />,
+      },
+    ],
   },
   {
     path: "*",
