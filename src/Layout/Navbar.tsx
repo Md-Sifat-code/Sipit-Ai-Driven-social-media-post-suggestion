@@ -1,97 +1,75 @@
-import UserAvatar from "@/ui/UserAvatar";
 import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from "@/components/ui/popover";
-import { Button } from "@/components/ui/button";
-import { useAppDispatch } from "@/hooks/useRedux";
-import { logout } from "@/store/Slices/AuthSlice/authSlice";
 
+// Navbar Component
 const Navbar: React.FC = () => {
-  const navigate = useNavigate();
-  const [isOpen, setIsOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const dispatch = useAppDispatch();
-
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
-
-  const handleLogout = () => {
-    dispatch(logout());
-    navigate("/login");
-  };
+  const navItems = [
+    { name: "Home", href: "#" },
+    { name: "Feed", href: "#" },
+    { name: "Examples", href: "#" },
+    { name: "About", href: "#" },
+    { name: "Contact", href: "#" },
+    { name: "Pricing", href: "#" },
+  ];
 
   return (
-    <nav className="bg-website-color-green shadow-lg">
-      <div className=" mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
+    <nav className="bg-white pt-2 shadow-sm">
+      <div className="max-w-8xl mx-auto px-4  sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <div className="flex-shrink-0">
-            <Link to="/" className="text-white text-2xl font-bold">
-              MyApp
-            </Link>
+          <div className="flex items-center">
+            <div className="flex-shrink-0">
+              <div className="flex items-center space-x-2">
+              <img className="h-10 sm:12 md:h-12 lg:h-14" src="../src/assets/logo.svg" alt="" />
+              </div>
+            </div>
           </div>
 
-          {/* Desktop Menu */}
-          <div className="hidden md:flex space-x-4">
-            <Link
-              to="/"
-              className="text-white hover:bg-website-color-lightGray hover:text-black px-3 py-2 rounded-md text-sm font-medium"
-            >
-              Home
-            </Link>
-            <Link
-              to="/about"
-              className="text-white hover:bg-website-color-lightGray hover:text-black px-3 py-2 rounded-md text-sm font-medium"
-            >
-              About
-            </Link>
-            <Link
-              to="/services"
-              className="text-white hover:bg-website-color-lightGray hover:text-black px-3 py-2 rounded-md text-sm font-medium"
-            >
-              Services
-            </Link>
-            <Link
-              to="/contact"
-              className="text-white hover:bg-website-color-lightGray hover:text-black px-3 py-2 rounded-md text-sm font-medium"
-            >
-              Contact
-            </Link>
-
-            <Popover>
-              <PopoverTrigger>
-                <UserAvatar userName="Mahim" />
-              </PopoverTrigger>
-              <PopoverContent className="mr-3 bg-website-color-darkGray border-none text-white">
-                <Button
-                  onClick={handleLogout}
-                  className="bg-website-color-lightGray text-black w-full"
+          {/* Desktop Navigation */}
+          <div className="hidden md:block">
+            <div className="ml-10 flex items-baseline space-x-8">
+              {navItems.map((item) => (
+                <a
+                  key={item.name}
+                  href={item.href}
+                  className="text-gray-700 hover:text-teal-600 px-3 py-2 text-sm font-medium transition-colors duration-200"
                 >
-                  Logout
-                </Button>
-              </PopoverContent>
-            </Popover>
+                  {item.name}
+                </a>
+              ))}
+            </div>
           </div>
 
-          {/* Mobile Menu Button */}
-          <div className="md:hidden flex items-center">
+          {/* Auth Buttons - Desktop */}
+          <div className="hidden md:flex items-center space-x-4">
+            <button className="text-gray-700 hover:text-teal-600 px-3 py-2 text-sm font-medium transition-colors duration-200">
+              Login
+            </button>
             <button
-              onClick={toggleMenu}
-              type="button"
-              className="text-white hover:text-gray-300 focus:outline-none"
+              className="w-full min-w-max  mt-2 mx-3 text-white px-4 py-2 text-sm font-medium transition-colors duration-200 rounded-[8px] border border-[#3AADB2]"
+              style={{
+                background:
+                  "linear-gradient(270deg, #0D777C 0.23%, #3AADB2 99.77%)",
+              }}
+            >
+              Free Register
+            </button>
+          </div>
+
+          {/* Mobile menu button */}
+          <div className="md:hidden">
+            <button
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-teal-600 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-teal-500"
             >
               <svg
                 className="h-6 w-6"
+                stroke="currentColor"
                 fill="none"
                 viewBox="0 0 24 24"
-                stroke="currentColor"
               >
-                {isOpen ? (
+                {isMenuOpen ? (
                   <path
                     strokeLinecap="round"
                     strokeLinejoin="round"
@@ -103,7 +81,7 @@ const Navbar: React.FC = () => {
                     strokeLinecap="round"
                     strokeLinejoin="round"
                     strokeWidth={2}
-                    d="M4 6h16M4 12h16m-7 6h7"
+                    d="M4 6h16M4 12h16M4 18h16"
                   />
                 )}
               </svg>
@@ -112,34 +90,37 @@ const Navbar: React.FC = () => {
         </div>
       </div>
 
-      {/* Mobile Menu */}
-      {isOpen && (
+      {/* Mobile Navigation Menu */}
+      {isMenuOpen && (
         <div className="md:hidden">
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            <Link
-              to="/"
-              className="text-white block hover:bg-purple-700 px-3 py-2 rounded-md text-base font-medium"
-            >
-              Home
-            </Link>
-            <Link
-              to="/about"
-              className="text-white block hover:bg-purple-700 px-3 py-2 rounded-md text-base font-medium"
-            >
-              About
-            </Link>
-            <Link
-              to="/services"
-              className="text-white block hover:bg-purple-700 px-3 py-2 rounded-md text-base font-medium"
-            >
-              Services
-            </Link>
-            <Link
-              to="/contact"
-              className="text-white block hover:bg-purple-700 px-3 py-2 rounded-md text-base font-medium"
-            >
-              Contact
-            </Link>
+          <div className="px-6 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t">
+            {navItems.map((item) => (
+              <a
+                key={item.name}
+                href={item.href}
+                className="text-gray-700 hover:text-teal-600 block px-3 py-2 text-base font-medium transition-colors duration-200"
+              >
+                {item.name}
+              </a>
+            ))}
+            <div className="border-t pt-4 mt-4">
+              <a
+                href="#"
+                className="text-gray-700 hover:text-teal-600 block px-3 py-2 text-base font-medium transition-colors duration-200"
+              >
+                Login
+              </a>
+
+              <button
+                className="w-full mt-2 mx-3 text-white px-4 py-2 text-sm font-medium transition-colors duration-200 rounded-[8px] border border-[#3AADB2]"
+                style={{
+                  background:
+                    "linear-gradient(270deg, #0D777C 0.23%, #3AADB2 99.77%)",
+                }}
+              >
+                Free Register
+              </button>
+            </div>
           </div>
         </div>
       )}
