@@ -1,8 +1,13 @@
+import Banner from "../components/Home-page/Banner"
+import HowItWorks from "../components/Home-page/HowItWorks"
+import SocialPostsMarquee from "../components/Home-page/PostCard"
 
 const Home = () => {
   return (
     <div>
-      <h1>Home</h1>
+     <Banner />
+     <SocialPostsMarquee/>
+     <HowItWorks/>
       
     </div>
   )
