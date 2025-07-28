@@ -30,5 +30,5 @@
 
 /* Custom radial gradient for active nav item */
 .bg-radial-active {
-  background: radial-gradient(circle at right, #178C91 5%, #323232 64%);
+  background: radial-gradient(circle at right, #178C91 0%, #323232 24%);
 }
