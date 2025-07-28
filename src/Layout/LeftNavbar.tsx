@@ -1,10 +1,8 @@
 
 
 import { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { 
-  Menu, 
-  X,
   ChevronRight,
 } from 'lucide-react';
 import logo from '../assets/Vector.png'
@@ -16,33 +14,26 @@ import { RiMenuFold3Fill, RiMenuFold4Fill } from "react-icons/ri";
 const LeftNavbar = () => {
   const [isOpen, setIsOpen] = useState(true);
   const [context, setContext] = useState('History');
-  const location = useLocation();
-
   const navigationItems = [
     {
       name: 'Home',
-      path: '/dashboard',
-      isActive: location.pathname === '/dashboard'
+      path: '/dashboard/home',
     },
     {
       name: 'Community Feed',
       path: '/dashboard/community',
-      isActive: location.pathname === '/dashboard/community'
     },
     {
       name: 'Package & Pricing',
       path: '/dashboard/package',
-      isActive: location.pathname === '/dashboard/package'
     },
     {
       name: 'Disclaimer',
       path: '/dashboard/disclaimer',
-      isActive: location.pathname === '/dashboard/disclaimer'
     },
     {
       name: 'Support Centre',
       path: '/dashboard/support',
-      isActive: location.pathname === '/dashboard/support'
     }
   ];
 
@@ -71,10 +62,10 @@ const LeftNavbar = () => {
       {/* Sidebar */}
       <div
         className={`
-          fixed top-0 left-0 h-min-screen bg-[#414141] text-white z-50 transition-transform duration-300 ease-in-out
+          fixed top-0 left-0 h-screen bg-[#414141] text-white z-50 transition-transform duration-300 ease-in-out
           ${isOpen ? 'translate-x-0' : '-translate-x-400'}
           lg:translate-x-0 lg:static lg:z-auto
-          w-[351px] flex flex-col m-2 rounded-xl
+          w-[351px] flex flex-col rounded-xl overflow-y-auto m-2
         `}
       >
         {/* Logo Section */}
@@ -100,14 +91,15 @@ const LeftNavbar = () => {
         {/* Navigation Items */}
         <nav className="flex-1 py-6">
           <ul className="space-y-2 px-4">
+            
             {navigationItems.map((item) => (
               <li key={item.name}>
-                <Link
+                <NavLink
                   to={item.path}
                   onClick={() => setIsOpen(false)}
-                  className={`
+                  className={({ isActive }) => `
                     flex items-center justify-between px-4 py-3 rounded-lg transition-all duration-200
-                    ${item.isActive 
+                    ${isActive 
                       ? 'bg-radial-active text-white shadow-lg' // Active items will show radial bg color
                       : 'text-gray-300 hover:bg-website-color-lightGray/10 hover:text-white'
                     }
@@ -116,8 +108,8 @@ const LeftNavbar = () => {
                   <div className="flex items-center space-x-3">
                     <span className="font-medium">{item.name}</span>
                   </div>
-                  {item.isActive && <ChevronRight size={16} />}
-                </Link>
+                  {item.name && <ChevronRight size={16} />}
+                </NavLink>
               </li>
             ))}
           </ul>
