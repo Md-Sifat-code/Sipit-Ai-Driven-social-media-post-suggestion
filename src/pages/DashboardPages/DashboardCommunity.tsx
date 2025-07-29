@@ -119,10 +119,10 @@ const DashboardCommunity = () => {
   ];
 
   return (
-    <div className="text-white min-h-screen px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
+    <div className="text-white min-h-screen ">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div
-          className="flex items-center gap-2 mb-6 sm:mb-8 lg:mb-10 cursor-pointer pt-4"
+          className="flex items-center gap-2 mb-10 cursor-pointer"
           onClick={() => navigate(-1)}
         >
           <FaArrowLeft className="text-lg sm:text-base" />
@@ -229,7 +229,7 @@ const DashboardCommunity = () => {
                   <div className="flex items-center justify-between border-t border-gray-700 pt-4">
                     <div className="flex items-center gap-3 sm:gap-6">
                       <button className="flex items-center gap-1 sm:gap-2 text-gray-400 hover:text-red-400 transition-colors">
-                        <div className="flex items-center z-30">
+                        <div className="flex items-center z-20">
                           <FaHeart className="w-4 h-4 sm:w-5 sm:h-5 text-red-400" />
                           <BsEmojiGrinFill className="w-4 h-4 sm:w-5 sm:h-5 -z-10 -ml-1 text-yellow-400" />
                           <BsEmojiSunglassesFill className="w-4 h-4 sm:w-5 sm:h-5 -z-20 -ml-1 text-yellow-400" />
@@ -272,7 +272,7 @@ const DashboardCommunity = () => {
           </div>
 
           {/* Profile Sidebar - Hidden on small devices, visible only on XL and above */}
-          <div className="hidden xl:block w-80 flex-shrink-0">
+          <div className="hidden xl:block w-80 flex-shrink-0 z-10">
             <div className="sticky top-4 space-y-4 sm:space-y-6">
               {/* Profile Card */}
               <div className="bg-[#2A2A2A] border border-[#414141] rounded-2xl relative mx-auto max-w-sm xl:max-w-none">
@@ -288,7 +288,7 @@ const DashboardCommunity = () => {
 
                 {/* Profile image positioned absolute - outside overflow container */}
                 <div
-                  className="absolute top-0 left-1/2 transform -translate-x-1/2 z-50"
+                  className="absolute top-0 left-1/2 transform -translate-x-1/2 z-15"
                   style={{ top: "80px" }}
                 >
                   <div className="relative">

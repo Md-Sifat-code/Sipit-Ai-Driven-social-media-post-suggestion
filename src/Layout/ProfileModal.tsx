@@ -31,7 +31,7 @@ const ProfileModal = () => {
   }, [open]);
 
   return (
-    <div className="fixed top-3 right-2 md:right-5 inline-block " ref={ref}>
+    <div className="fixed top-3 right-2 md:right-5 inline-block z-50" ref={ref}>
       <button
         className="px-4 py-2 bg-[#323232] text-white rounded-xl focus:outline-none cursor-pointer"
         onClick={() => setOpen((v) => !v)}
@@ -50,11 +50,12 @@ const ProfileModal = () => {
         <div className="absolute -left-5 mt-1 min-w-max bg-[#232323] rounded-lg shadow-lg py-2 z-50 border border-[#323232]">
           <Link
             to="/dashboard/profile"
+            onClick={() => setOpen((v) => !v)}
             className=" w-full text-left px-4 py-2 text-white hover:bg-[#178C91] rounded-t-lg transition-colors flex items-center gap-2"
           >
             <span>View Profile</span> <MdArrowForwardIos />
           </Link>
-          <button className=" w-full text-left px-4 py-2 text-white hover:bg-[#178C91] cursor-pointer rounded-b-lg transition-colors flex items-center gap-2">
+          <button onClick={() => setOpen((v) => !v)} className=" w-full text-left px-4 py-2 text-white hover:bg-[#178C91] cursor-pointer rounded-b-lg transition-colors flex items-center gap-2">
             <MdLogout /> <span>Logout</span>
           </button>
         </div>
