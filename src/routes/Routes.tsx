@@ -10,7 +10,10 @@ import DashboardCommunity from "../pages/DashboardPages/DashboardCommunity";
 import DashboardPAckageandPricing from "../pages/DashboardPages/DashboardPAckageandPricing";
 import DasboardDisclaimer from "../pages/DashboardPages/DasboardDisclaimer";
 import DashboardSupportCenter from "../pages/DashboardPages/DashboardSupportCenter";
-import PremiumCheckout from "../pages/DashboardPages/PremiumCheckout";
+import Login from "../pages/Login";
+import Register from "../pages/Register";
+
+
 
 const routes = createBrowserRouter([
   {
@@ -23,6 +26,15 @@ const routes = createBrowserRouter([
       },
     ],
   },
+  {
+    path: '/auth/login',
+    element: <Login />,
+  },
+  {
+    path: '/auth/register',
+    element: <Register />
+  },
+
   {
     path: "/dashboard",
     element: <DashboardLayout />,
@@ -45,10 +57,10 @@ const routes = createBrowserRouter([
         path: "/dashboard/package",
         element: <DashboardPAckageandPricing />,
       },
-      {
-        path: "/dashboard/package/premium-checkout",
-        element: <PremiumCheckout />,
-      },
+      // {
+      //   path: "/dashboard/package/premium-checkout",
+      //   element: <PremiumCheckout />,
+      // },
       {
         path: "/dashboard/disclaimer",
 
