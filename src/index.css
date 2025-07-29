@@ -1,3 +1,4 @@
+
 @import "tailwindcss";
 
 @theme {
@@ -24,4 +25,10 @@
 
 .animate-marquee2 {
   animation: marquee2 20s linear infinite;
+}
+
+
+/* Custom radial gradient for active nav item */
+.bg-radial-active {
+  background: radial-gradient(circle at right, #178C91 0%, #323232 24%);
 }
