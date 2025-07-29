@@ -1,4 +1,3 @@
-
 import { HiBadgeCheck } from "react-icons/hi";
 import { BiBadgeCheck } from "react-icons/bi";
 import { useNavigate } from "react-router-dom";
@@ -7,8 +6,11 @@ const DashboardPAckageandPricing = () => {
   const navigate = useNavigate();
   return (
     <div className=" text-white">
-      <div className="max-w-7xl mx-auto">
-        <div className="flex items-center gap-2 mb-10 cursor-pointer" onClick={() => navigate(-1)}>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div
+          className="flex items-center gap-2 mb-10 cursor-pointer"
+          onClick={() => navigate(-1)}
+        >
           <FaArrowLeft />
           <p className="text-lg font-medium">Package & Pricing</p>
         </div>
@@ -23,11 +25,13 @@ const DashboardPAckageandPricing = () => {
         </div>
 
         {/* Pricing Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 max-w-6xl ">
           {/* Free Plan */}
           <div className="bg-[#232323] border border-gray-700 rounded-2xl p-6 relative">
             <div className="mb-6 flex flex-col items-start justify-start gap-2">
-              <div className="text-white text-sm mb-2 bg-[#323232] px-3 py-1 rounded-2xl">Free</div>
+              <div className="text-white text-sm mb-2 bg-[#323232] px-3 py-1 rounded-2xl">
+                Free
+              </div>
               <h2 className="text-3xl font-bold mb-2 bg-gradient-to-r from-[#3AADB2] via-[#178C91] to-[#0D777C] bg-clip-text text-transparent">
                 Just Vibe It
               </h2>
@@ -63,7 +67,7 @@ const DashboardPAckageandPricing = () => {
               </div>
             </div>
 
-            <button className="w-full bg-gray-200 text-gray-800 py-3 rounded-xl font-medium">
+            <button className="cursor-pointer w-full bg-gray-200 text-gray-800 py-3 rounded-xl font-medium">
               Currently Using
             </button>
           </div>
@@ -71,7 +75,9 @@ const DashboardPAckageandPricing = () => {
           {/* Boosted Plan */}
           <div className="bg-[#232323] border border-gray-700 rounded-2xl p-6 relative">
             <div className="mb-6 flex flex-col items-start justify-start gap-2">
-              <div className="text-white text-sm mb-2 bg-[#323232] px-3 py-1 rounded-2xl">Boosted</div>
+              <div className="text-white text-sm mb-2 bg-[#323232] px-3 py-1 rounded-2xl">
+                Boosted
+              </div>
               <h2 className="text-3xl font-bold mb-2 bg-gradient-to-r from-[#3AADB2] via-[#178C91] to-[#0D777C] bg-clip-text text-transparent">
                 Fee With Ads
               </h2>
@@ -111,7 +117,7 @@ const DashboardPAckageandPricing = () => {
               </div>
             </div>
 
-            <button className="w-full bg-gray-200 text-gray-800 py-3 rounded-xl font-medium">
+            <button className="cursor-pointer w-full bg-gray-200 text-gray-800 py-3 rounded-xl font-medium">
               Watch Ads
             </button>
           </div>
@@ -124,9 +130,13 @@ const DashboardPAckageandPricing = () => {
             </div>
 
             <div className="mb-6 flex flex-col items-start justify-start gap-2">
-              <div className="text-white text-sm mb-2 bg-[#323232] px-3 py-1 rounded-2xl">Premium</div>
+              <div className="text-white text-sm mb-2 bg-[#323232] px-3 py-1 rounded-2xl">
+                Premium
+              </div>
               <div className="flex items-baseline gap-1 mb-2">
-                <span className="text-3xl font-bold mb-2 bg-gradient-to-r from-[#3AADB2] via-[#178C91] to-[#0D777C] bg-clip-text text-transparent">$15.00</span>
+                <span className="text-3xl font-bold mb-2 bg-gradient-to-r from-[#3AADB2] via-[#178C91] to-[#0D777C] bg-clip-text text-transparent">
+                  $15.00
+                </span>
                 <span className="text-gray-400 text-sm">/month</span>
               </div>
               <p className="text-white text-sm">
@@ -158,8 +168,8 @@ const DashboardPAckageandPricing = () => {
             </div>
 
             <button
-              className="w-full bg-gradient-to-r from-[#3AADB2] to-[#0D777C] hover:bg-teal-600 text-white py-3 rounded-xl font-medium transition-colors"
-              onClick={() => navigate('/dashboard/package/premium-checkout')}
+              className="cursor-pointer w-full bg-gradient-to-r from-[#3AADB2] to-[#0D777C] hover:bg-teal-600 text-white py-3 rounded-xl font-medium transition-colors"
+              onClick={() => navigate("/dashboard/package/premium-checkout")}
             >
               Go Premium
             </button>
