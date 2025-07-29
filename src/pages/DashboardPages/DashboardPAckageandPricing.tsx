@@ -7,7 +7,7 @@ const DashboardPAckageandPricing = () => {
   const navigate = useNavigate();
   return (
     <div className=" text-white">
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-7xl mx-auto">
         <div className="flex items-center gap-2 mb-10 cursor-pointer" onClick={() => navigate(-1)}>
           <FaArrowLeft />
           <p className="text-lg font-medium">Package & Pricing</p>

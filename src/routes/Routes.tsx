@@ -14,6 +14,8 @@ import Login from "../pages/Login";
 import Register from "../pages/Register";
 
 
+import PremiumCheckout from "../pages/DashboardPages/PremiumCheckout";
+import Profile from "../pages/DashboardPages/Profile";
 
 const routes = createBrowserRouter([
   {
@@ -50,6 +52,10 @@ const routes = createBrowserRouter([
         element: <DashboardHome />,
       },
       {
+        path: "/dashboard/profile",
+        element: <Profile />,
+      },
+      {
         path: "/dashboard/community",
         element: <DashboardCommunity></DashboardCommunity>,
       },
@@ -57,10 +63,10 @@ const routes = createBrowserRouter([
         path: "/dashboard/package",
         element: <DashboardPAckageandPricing />,
       },
-      // {
-      //   path: "/dashboard/package/premium-checkout",
-      //   element: <PremiumCheckout />,
-      // },
+      {
+        path: "/dashboard/package/premium-checkout",
+        element: <PremiumCheckout />,
+      },
       {
         path: "/dashboard/disclaimer",
 
