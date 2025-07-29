@@ -28,17 +28,13 @@ const Profile = () => {
           <div className="space-y-4 sm:space-y-6">
             {/* Profile Card */}
             <div className="bg-[#2A2A2A] border border-[#414141] rounded-2xl relative mx-auto max-w-sm sm:max-w-md lg:max-w-lg">
-              {/* Futuristic wireframe background */}
               <div className="h-32 sm:h-36 lg:h-40 bg-gradient-to-br from-[#0D4D4F] via-[#1A5F5F] to-[#0F3A3C] relative overflow-hidden rounded-t-2xl">
-                {/* 3D wireframe face pattern */}
                 <img
                   src={neuralImg}
                   alt=""
                   className="w-full h-full object-cover"
                 />
               </div>
-
-              {/* Profile image positioned absolute - outside overflow container */}
               <div
                 className="absolute top-0 left-1/2 transform -translate-x-1/2 z-50"
                 style={{ top: "70px" }}
@@ -49,7 +45,6 @@ const Profile = () => {
                     alt="Cody Fisher"
                     className="w-20 h-20 sm:w-24 sm:h-24 lg:w-28 lg:h-28 rounded-full border-4 border-[#2A2A2A] object-cover"
                   />
-                  {/* Green online dot with teal color */}
                   <div className="absolute bottom-1 right-1 w-6 h-6 sm:w-7 sm:h-7 text-white bg-[#00C2C7] rounded-full border-2 border-[#2A2A2A] flex items-center justify-center">
                     <CiCamera className="text-xs sm:text-sm" />
                   </div>

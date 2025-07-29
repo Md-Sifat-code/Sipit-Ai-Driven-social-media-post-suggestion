@@ -64,10 +64,10 @@ const routes = createBrowserRouter([
         path: "/dashboard/package",
         element: <DashboardPAckageandPricing />,
       },
-      // {
-      //   path: "/dashboard/package/premium-checkout",
-      //   element: <PremiumCheckout />,
-      // },
+      {
+        path: "/dashboard/package/premium-checkout",
+        element: <PremiumCheckout />,
+      },
       {
         path: "/dashboard/disclaimer",
 
