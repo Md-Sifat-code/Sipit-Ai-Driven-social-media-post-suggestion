@@ -1,6 +1,5 @@
 import { createBrowserRouter } from "react-router-dom";
 
-
 import NotFound from "../pages/NotFound";
 
 import Home from "../pages/Home";
@@ -9,6 +8,9 @@ import DashboardLayout from "../Layout/DashboardLayout";
 import DashboardHome from "../pages/DashboardPages/DashboardHome";
 import DashboardCommunity from "../pages/DashboardPages/DashboardCommunity";
 import DashboardPAckageandPricing from "../pages/DashboardPages/DashboardPAckageandPricing";
+import DasboardDisclaimer from "../pages/DashboardPages/DasboardDisclaimer";
+import DashboardSupportCenter from "../pages/DashboardPages/DashboardSupportCenter";
+import PremiumCheckout from "../pages/DashboardPages/PremiumCheckout";
 
 const routes = createBrowserRouter([
   {
@@ -16,32 +18,47 @@ const routes = createBrowserRouter([
     element: <MainLayout />,
     children: [
       {
-        path : "/",
-        element : <Home/>
-      }
-    ]
-      
+        path: "/",
+        element: <Home />,
+      },
+    ],
   },
   {
-    path : "/dashboard",
-    element : <DashboardLayout/>,
-    children : [{
-      path : "/dashboard",
-      element : <DashboardHome/>
-    },
-    {
-      path : "/dashboard/community",
-      element : <DashboardCommunity></DashboardCommunity>
-    },
-    {
-      path : "/dashboard/package",
-      element : <DashboardPAckageandPricing/>
-    },
-    {
-      path : "/dashboard/disclaimer",
-      element : <D
-    }
-  ]
+    path: "/dashboard",
+    element: <DashboardLayout />,
+    children: [
+      {
+        index: true,
+        path: "/dashboard",
+        element: <DashboardHome />,
+      },
+      {
+        index: true,
+        path: "/dashboard/home",
+        element: <DashboardHome />,
+      },
+      {
+        path: "/dashboard/community",
+        element: <DashboardCommunity></DashboardCommunity>,
+      },
+      {
+        path: "/dashboard/package",
+        element: <DashboardPAckageandPricing />,
+      },
+      {
+        path: "/dashboard/package/premium-checkout",
+        element: <PremiumCheckout />,
+      },
+      {
+        path: "/dashboard/disclaimer",
+
+        element: <DasboardDisclaimer />,
+      },
+      {
+        path: "/dashboard/support",
+        element: <DashboardSupportCenter />,
+      },
+    ],
   },
   {
     path: "*",
