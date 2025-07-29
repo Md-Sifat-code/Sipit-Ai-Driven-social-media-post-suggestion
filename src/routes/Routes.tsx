@@ -10,9 +10,12 @@ import DashboardCommunity from "../pages/DashboardPages/DashboardCommunity";
 import DashboardPAckageandPricing from "../pages/DashboardPages/DashboardPAckageandPricing";
 import DasboardDisclaimer from "../pages/DashboardPages/DasboardDisclaimer";
 import DashboardSupportCenter from "../pages/DashboardPages/DashboardSupportCenter";
+
+import PremiumCheckout from "../pages/DashboardPages/PremiumCheckout";
+import Profile from "../pages/DashboardPages/Profile";
+
 import Login from "../pages/Login";
 import Register from "../pages/Register";
-
 
 
 const routes = createBrowserRouter([
@@ -48,6 +51,10 @@ const routes = createBrowserRouter([
         index: true,
         path: "/dashboard/home",
         element: <DashboardHome />,
+      },
+      {
+        path: "/dashboard/profile",
+        element: <Profile />,
       },
       {
         path: "/dashboard/community",
