@@ -33,6 +33,7 @@
   background: radial-gradient(circle at right, #178C91 0%, #323232 24%);
 }
 
+
 /* Custom scrollbar styles */
 .scrollbar-thin {
   scrollbar-width: thin;
@@ -56,3 +57,4 @@
 .scrollbar-thin::-webkit-scrollbar-thumb:hover {
   background: #6B7280;
 }
+
