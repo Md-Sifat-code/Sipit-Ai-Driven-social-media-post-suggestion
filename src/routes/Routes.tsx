@@ -11,6 +11,14 @@ import DashboardPAckageandPricing from "../pages/DashboardPages/DashboardPAckage
 import DasboardDisclaimer from "../pages/DashboardPages/DasboardDisclaimer";
 import DashboardSupportCenter from "../pages/DashboardPages/DashboardSupportCenter";
 
+
+
+import PremiumCheckout from "../pages/DashboardPages/PremiumCheckout";
+import Profile from "../pages/DashboardPages/Profile";
+
+
+
+
 const routes = createBrowserRouter([
   {
     path: "/",
@@ -38,6 +46,10 @@ const routes = createBrowserRouter([
         element: <DashboardHome />,
       },
       {
+        path: "/dashboard/profile",
+        element: <Profile />,
+      },
+      {
         path: "/dashboard/community",
         element: <DashboardCommunity></DashboardCommunity>,
       },
@@ -45,10 +57,10 @@ const routes = createBrowserRouter([
         path: "/dashboard/package",
         element: <DashboardPAckageandPricing />,
       },
-      // {
-      //   path: "/dashboard/package/premium-checkout",
-      //   element: <PremiumCheckout />,
-      // },
+      {
+        path: "/dashboard/package/premium-checkout",
+        element: <PremiumCheckout />,
+      },
       {
         path: "/dashboard/disclaimer",
 
