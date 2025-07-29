@@ -10,10 +10,6 @@ import DashboardCommunity from "../pages/DashboardPages/DashboardCommunity";
 import DashboardPAckageandPricing from "../pages/DashboardPages/DashboardPAckageandPricing";
 import DasboardDisclaimer from "../pages/DashboardPages/DasboardDisclaimer";
 import DashboardSupportCenter from "../pages/DashboardPages/DashboardSupportCenter";
-import Login from "../pages/Login";
-import Register from "../pages/Register";
-
-
 
 const routes = createBrowserRouter([
   {
@@ -25,14 +21,6 @@ const routes = createBrowserRouter([
         element: <Home />,
       },
     ],
-  },
-  {
-    path: '/auth/login',
-    element: <Login />,
-  },
-  {
-    path: '/auth/register',
-    element: <Register />
   },
 
   {
