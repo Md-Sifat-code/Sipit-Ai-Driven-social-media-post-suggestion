@@ -64,7 +64,7 @@ const DasboardDisclaimer = () => {
 
   return (
     <div className=" text-white min-h-screen">
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-7xl mx-auto">
         <div className="flex items-center gap-2 mb-10 cursor-pointer" onClick={() => navigate(-1)}>
                   <FaArrowLeft />
                   <p className="text-lg font-medium">Disclaimer</p>

@@ -3,6 +3,8 @@
 import { useState, useRef, useEffect } from 'react';
 import userImg from '../assets/profile.png'
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
+import { MdArrowForwardIos, MdLogout } from 'react-icons/md';
+import { Link } from 'react-router-dom';
 const ProfileModal = () => {
     const [open, setOpen] = useState(false);
     const ref = useRef<HTMLDivElement>(null);
@@ -31,7 +33,7 @@ const ProfileModal = () => {
     }, [open]);
 
     return (
-        <div className="fixed top-2 right-2 md:right-5 inline-block" ref={ref}>
+        <div className="fixed top-3 right-2 md:right-5 inline-block" ref={ref}>
             <button
                 className="px-4 py-2 bg-[#323232] text-white rounded-xl focus:outline-none"
                 onClick={() => setOpen((v) => !v)}
@@ -47,8 +49,8 @@ const ProfileModal = () => {
             </button>
             {open && (
                 <div className="absolute -left-5 mt-1 min-w-max bg-[#232323] rounded-lg shadow-lg py-2 z-50 border border-[#323232]">
-                    <button className="block w-full text-left px-4 py-2 text-white hover:bg-[#178C91] rounded-t-lg transition-colors">View Profile</button>
-                    <button className="block w-full text-left px-4 py-2 text-white hover:bg-[#178C91] rounded-b-lg transition-colors">Logout</button>
+                    <Link to="/dashboard/profile" className=" w-full text-left px-4 py-2 text-white hover:bg-[#178C91] rounded-t-lg transition-colors flex items-center gap-2"><span>View Profile</span> <MdArrowForwardIos /></Link>
+                    <button className=" w-full text-left px-4 py-2 text-white hover:bg-[#178C91] rounded-b-lg transition-colors flex items-center gap-2"><MdLogout /> <span>Logout</span></button>
                 </div>
             )}
         </div>

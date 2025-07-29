@@ -11,6 +11,7 @@ import DashboardPAckageandPricing from "../pages/DashboardPages/DashboardPAckage
 import DasboardDisclaimer from "../pages/DashboardPages/DasboardDisclaimer";
 import DashboardSupportCenter from "../pages/DashboardPages/DashboardSupportCenter";
 import PremiumCheckout from "../pages/DashboardPages/PremiumCheckout";
+import Profile from "../pages/DashboardPages/Profile";
 
 const routes = createBrowserRouter([
   {
@@ -36,6 +37,10 @@ const routes = createBrowserRouter([
         index: true,
         path: "/dashboard/home",
         element: <DashboardHome />,
+      },
+      {
+        path: "/dashboard/profile",
+        element: <Profile />,
       },
       {
         path: "/dashboard/community",
