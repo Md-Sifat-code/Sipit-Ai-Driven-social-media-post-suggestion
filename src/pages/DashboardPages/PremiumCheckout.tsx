@@ -20,7 +20,7 @@ export default function PremiumCheckout() {
 
   return (
     <div className=" text-white min-h-screen">
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div
           className="flex items-center gap-2 mb-10 cursor-pointer "
           onClick={() => navigate(-1)}
@@ -30,9 +30,9 @@ export default function PremiumCheckout() {
         </div>
         <h1 className="text-4xl font-bold mb-8">Go With Premium</h1>
 
-        <div className="flex flex-col md:flex-row justify-center items-start gap-8 w-full">
+        <div className="flex flex-col xl:flex-row justify-center items-start gap-8 w-full">
           {/* Payment Form */}
-          <div className="bg-[#232323] border border-teal-500 rounded-2xl p-6 w-full md:w-2/3">
+          <div className="bg-[#232323] border border-teal-500 rounded-2xl p-6 w-full xl:w-2/3">
             <div className="flex items-center justify-between mb-6">
               <h2 className="text-xl font-semibold">Pay With Card</h2>
               <div className="flex items-center gap-2 text-sm  bg-[#323232] px-3 py-1 rounded-2xl">
@@ -104,7 +104,7 @@ export default function PremiumCheckout() {
           </div>
 
           {/* Order Summary */}
-          <div className="bg-[#232323] border border-teal-500 rounded-2xl p-6 w-full md:w-1/3">
+          <div className="bg-[#232323] border border-teal-500 rounded-2xl p-6 w-full xl:w-1/3">
             <div className="mb-3 flex flex-col items-start justify-start gap-1">
               <div className="text-white text-sm mb-2 bg-[#323232] px-3 py-1 rounded-2xl">
                 Premium
@@ -178,7 +178,7 @@ export default function PremiumCheckout() {
                 </div>
               </div>
 
-              <button className="w-full bg-gradient-to-r from-[#3AADB2] to-[#0D777C] hover:bg-teal-600 text-white py-4 rounded-xl font-medium text-lg transition-colors">
+              <button className="cursor-pointer w-full bg-gradient-to-r from-[#3AADB2] to-[#0D777C] hover:bg-teal-600 text-white py-4 rounded-xl font-medium text-lg transition-colors">
                 Make Payment
               </button>
             </div>

@@ -30,11 +30,15 @@ const routes = createBrowserRouter([
   },
   {
     path: '/auth/login',
-    element: <Login />,
+    element: <Login onClose={function (): void {
+      throw new Error("Function not implemented.");
+    }} />,
   },
   {
     path: '/auth/register',
-    element: <Register />
+    element: <Register onClose={function (): void {
+      throw new Error("Function not implemented.");
+    }} />
   },
 
   {
