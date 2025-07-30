@@ -8,7 +8,7 @@ const DashboardLayout = () => {
       <LeftNavbar />
       <ProfileModal />
       <main className="flex-1 h-screen overflow-y-auto">
-        <div className="pt-10 mt-10 px-[2%] md:px-[3%] min-h-full">
+        <div className="pt-10  px-[2%] md:px-[3%] ">
           <Outlet />
         </div>
       </main>

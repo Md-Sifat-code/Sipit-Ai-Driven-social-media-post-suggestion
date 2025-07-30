@@ -1,9 +1,4 @@
-import {
-  Copy,
-  Plus,
-  Paperclip,
-  ImageIcon,
-} from "lucide-react";
+import { Copy, Plus, Paperclip, ImageIcon } from "lucide-react";
 import { FaWandMagicSparkles } from "react-icons/fa6";
 import { BsArrowRepeat } from "react-icons/bs";
 import { FiSend } from "react-icons/fi";
@@ -22,7 +17,9 @@ const DashboardHome = () => {
           <div className="flex flex-col items-end space-y-1 ">
             <div className="flex items-center space-x-2">
               <span className="text-[#178C91] font-medium">Pitch Polisher</span>
-              <span className="text-[#178C91] "><FaWandMagicSparkles /></span>
+              <span className="text-[#178C91] ">
+                <FaWandMagicSparkles />
+              </span>
             </div>
             <div className="bg-[#232323] rounded-lg px-4 py-3 min-w-max">
               "Yo we got some sick offers bruh, hit me up"
@@ -48,14 +45,14 @@ const DashboardHome = () => {
               </div>
             </div>
             <div className="flex items-center space-x-3">
-              <button className="text-gray-400 hover:text-white">
-                <BsArrowRepeat  className="w-4 h-4" />
+              <button className="text-gray-400 hover:text-white cursor-pointer">
+                <BsArrowRepeat className="w-4 h-4" />
               </button>
-              <button className="text-gray-400 hover:text-white">
+              <button className="text-gray-400 hover:text-white cursor-pointer">
                 <Copy className="w-4 h-4" />
               </button>
-              <button className="text-gray-400 hover:text-white">
-                <FiSend  className="w-4 h-4" />
+              <button className="text-gray-400 hover:text-white cursor-pointer">
+                <FiSend className="w-4 h-4" />
               </button>
               <span className="text-gray-400 text-xs ml-2">06:08 AM</span>
             </div>
@@ -66,35 +63,35 @@ const DashboardHome = () => {
         <div className="sticky bottom-0 left-0 w-full bg-[#1c1c1c] z-10">
           {/* Mode Selection Buttons */}
           <div className="flex flex-wrap gap-2 p-5 md:pr-10">
-            <button className="bg-[#232323] border-gray-700 text-white rounded-2xl px-1 md:px-3 py-1 md:py-2 hover:bg-gray-700 transition-colors">
+            <button className="bg-[#232323] border-gray-700 text-white rounded-2xl px-1 md:px-3 py-1 md:py-2 hover:bg-gray-700 transition-colors cursor-pointer">
               Roast Mode
             </button>
-            <button className="bg-[#232323] border-gray-700 text-white rounded-2xl px-1 md:px-3 py-1 md:py-2 hover:bg-gray-700 transition-colors">
+            <button className="bg-[#232323] border-gray-700 text-white rounded-2xl px-1 md:px-3 py-1 md:py-2 hover:bg-gray-700 transition-colors cursor-pointer">
               Brutal Truth
             </button>
-            <button className="bg-[#3A3A3A] hover:bg-teal-700 hover:text-white text-[#04a6ac] px-1 md:px-3 py-1 md:py-2 rounded-2xl flex items-center space-x-1 transition-colors">
+            <button className="bg-[#3A3A3A] hover:bg-teal-700 hover:text-white text-[#04a6ac] px-1 md:px-3 py-1 md:py-2 rounded-2xl flex items-center cursor-pointer space-x-1 transition-colors">
               <FaWandMagicSparkles className="w-4 h-4" />
               <span>Pitch Polisher</span>
             </button>
-            <button className="bg-[#232323] border-gray-700 text-white rounded-2xl px-1 md:px-3 py-1 md:py-2 hover:bg-gray-700 transition-colors">
+            <button className="bg-[#232323] border-gray-700 text-white rounded-2xl px-1 md:px-3 py-1 md:py-2 hover:bg-gray-700 transition-colors cursor-pointer">
               Petty Mode
             </button>
-            <button className="bg-[#232323] border-gray-700 text-white rounded-2xl px-1 md:px-3 py-1 md:py-2 hover:bg-gray-700 transition-colors">
+            <button className="bg-[#232323] border-gray-700 text-white rounded-2xl px-1 md:px-3 py-1 md:py-2 hover:bg-gray-700 transition-colors cursor-pointer">
               Too Real
             </button>
-            <button className="bg-[#232323] border-gray-700 text-white rounded-2xl px-1 md:px-3 py-1 md:py-2 hover:bg-gray-700 transition-colors">
+            <button className="bg-[#232323] border-gray-700 text-white rounded-2xl px-1 md:px-3 py-1 md:py-2 hover:bg-gray-700 transition-colors cursor-pointer">
               Drama Queen
             </button>
-            <button className="bg-[#232323] border-gray-700 text-white rounded-2xl px-1 md:px-3 py-1 md:py-2 hover:bg-gray-700 transition-colors">
+            <button className="bg-[#232323] border-gray-700 text-white rounded-2xl px-1 md:px-3 py-1 md:py-2 hover:bg-gray-700 transition-colors cursor-pointer">
               Nice Bot
             </button>
-            <button className="bg-[#232323] border-gray-700 text-white rounded-2xl px-1 md:px-3 py-1 md:py-2 hover:bg-gray-700 transition-colors">
+            <button className="bg-[#232323] border-gray-700 text-white rounded-2xl px-1 md:px-3 py-1 md:py-2 hover:bg-gray-700 transition-colors cursor-pointer">
               Gentle Feedback
             </button>
-            <button className="bg-[#232323] border-gray-700 text-white rounded-2xl px-1 md:px-3 py-1 md:py-2 hover:bg-gray-700 transition-colors">
+            <button className="bg-[#232323] border-gray-700 text-white rounded-2xl px-1 md:px-3 py-1 md:py-2 hover:bg-gray-700 transition-colors cursor-pointer">
               Meme Scanner
             </button>
-            <button className="bg-[#232323] border-gray-700 text-white rounded-2xl px-1 md:px-3 py-1 md:py-2 hover:bg-gray-700 transition-colors">
+            <button className="bg-[#232323] border-gray-700 text-white rounded-2xl px-1 md:px-3 py-1 md:py-2 hover:bg-gray-700 transition-colors cursor-pointer">
               Viral Vibes
             </button>
           </div>
@@ -109,19 +106,19 @@ const DashboardHome = () => {
               />
               <div className="flex items-end justify-between mt-3">
                 <div className="flex items-center space-x-2">
-                  <button className="text-gray-400 hover:text-white transition-colors">
+                  <button className="text-gray-400 cursor-pointer transition-colors">
                     <Paperclip className="w-5 h-5" />
                   </button>
-                  <button className="text-gray-400 hover:text-white transition-colors">
+                  <button className="text-gray-400 cursor-pointer transition-colors">
                     <ImageIcon className="w-5 h-5" />
                   </button>
                 </div>
                 <div className="flex flex-col justify-end items-end space-y-2">
-                  <button className="bg-[#EFEFEF] border border-gray-600 text-gray-500 hover:bg-gray-600 px-3 py-2 rounded-lg flex items-center transition-colors">
+                  <button className="bg-[#EFEFEF]  cursor-pointer border border-gray-600 text-gray-500 px-3 py-2 rounded-lg flex items-center transition-colors">
                     <Plus className="w-4 h-4 mr-1" />
                     New
                   </button>
-                  <button className="bg-radial-active hover:bg-teal-700 text-white px-3 py-2 rounded-lg flex items-center transition-colors">
+                  <button className="bg-radial-active cursor-pointer  hover:bg-teal-700 text-white px-3 py-2 rounded-lg flex items-center transition-colors">
                     <span>Write Now</span>
                     <FaWandMagicSparkles className="w-4 h-4 ml-1" />
                   </button>
@@ -130,7 +127,8 @@ const DashboardHome = () => {
             </div>
           </div>
         </div>
-      </div> {/* end of main flex-col container */}
+      </div>{" "}
+      {/* end of main flex-col container */}
     </div>
   );
 };

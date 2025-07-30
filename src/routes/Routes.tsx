@@ -10,7 +10,12 @@ import DashboardCommunity from "../pages/DashboardPages/DashboardCommunity";
 import DashboardPAckageandPricing from "../pages/DashboardPages/DashboardPAckageandPricing";
 import DasboardDisclaimer from "../pages/DashboardPages/DasboardDisclaimer";
 import DashboardSupportCenter from "../pages/DashboardPages/DashboardSupportCenter";
+import Login from "../pages/Login";
+import Register from "../pages/Register";
+
+
 import PremiumCheckout from "../pages/DashboardPages/PremiumCheckout";
+import Profile from "../pages/DashboardPages/Profile";
 
 const routes = createBrowserRouter([
   {
@@ -24,6 +29,19 @@ const routes = createBrowserRouter([
     ],
   },
   {
+    path: '/auth/login',
+    element: <Login onClose={function (): void {
+      throw new Error("Function not implemented.");
+    }} />,
+  },
+  {
+    path: '/auth/register',
+    element: <Register onClose={function (): void {
+      throw new Error("Function not implemented.");
+    }} />
+  },
+
+  {
     path: "/dashboard",
     element: <DashboardLayout />,
     children: [
@@ -36,6 +54,10 @@ const routes = createBrowserRouter([
         index: true,
         path: "/dashboard/home",
         element: <DashboardHome />,
+      },
+      {
+        path: "/dashboard/profile",
+        element: <Profile />,
       },
       {
         path: "/dashboard/community",
