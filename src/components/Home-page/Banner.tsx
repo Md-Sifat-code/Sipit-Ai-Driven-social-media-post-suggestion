@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import logo from "../../assets/line.svg"
 const Banner: React.FC = () => {
   const [activeMode, setActiveMode] = useState("Pitch Polisher");
   const [postContent, setPostContent] = useState("");
@@ -72,7 +72,7 @@ const Banner: React.FC = () => {
               </h2>
               <img
                 className="absolute right-0  w-40 sm:w-44 md:w-48 lg:w-56 xl:w-64 ml-2"
-                src="../src/assets/line.svg"
+                src={logo}
                 alt="decorative line"
               />
             </div>
