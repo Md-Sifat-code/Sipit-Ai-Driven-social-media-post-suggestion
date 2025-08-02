@@ -32,6 +32,9 @@
 .bg-radial-active {
   background: radial-gradient(circle at right, #178C91 0%, #323232 24%);
 }
+.bg-radial-faq {
+  background: radial-gradient(circle at right, #178C91A3 0%, #FCFDFD00 15%);
+}
 
 
 

@@ -100,7 +100,7 @@ const PricingPage: React.FC = () => {
       )}
 
       <div className="mb-6">
-        <div className="text-sm text-black  font-medium mb-1">{tier.name}</div>
+        <div className="text-sm text-black  font-medium mb-1 bg-[#E6F0F3] px-3 py-1 rounded-2xl max-w-max">{tier.name}</div>
         <div className="flex items-baseline gap-1 mb-2">
           {tier.name === "Premium" ? (
             <>
