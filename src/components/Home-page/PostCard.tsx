@@ -96,12 +96,12 @@ const SocialPostsMarquee: React.FC = () => {
   );
 
   return (
-    <div className=" bg-gradient-to-br from-gray-50 to-gray-100 lg:px-50 py-8">
+    <div className=" bg-gradient-to-br from-gray-50 to-gray-100 lg:px-60 py-8">
       {/* Marquee Container */}
       <div className="relative overflow-hidden">
         {/* Gradient Overlays */}
-        <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-gray-50 to-transparent z-10 pointer-events-none" />
-        <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-gray-100 to-transparent z-10 pointer-events-none" />
+        <div className="absolute left-0 top-0 bottom-0 w-40 bg-gradient-to-r from-gray-50 to-transparent z-10 pointer-events-none" />
+        <div className="absolute right-0 top-0 bottom-0 w-40 bg-gradient-to-r from-transparent to-gray-100 z-10 pointer-events-none" />
 
         {/* Marquee Content */}
         <div className="flex animate-marquee hover:pause-marquee">

@@ -31,7 +31,7 @@ const ProfileModal = () => {
   }, [open]);
 
   return (
-    <div className="fixed top-3 right-2 md:right-5 inline-block z-50" ref={ref}>
+    <div className="fixed top-3 right-[5%] md:right-10  z-50" ref={ref}>
       <button
         className="px-4 py-2 bg-[#323232] text-white rounded-xl focus:outline-none cursor-pointer"
         onClick={() => setOpen((v) => !v)}

@@ -83,21 +83,21 @@ const FAQAccordion: React.FC = () => {
               key={item.id}
               className={`overflow-hidden transition-all duration-200 hover:shadow-md ${
                 isOpen(item.id)
-                  ? "rounded-xl border border-[#EBEEF2] shadow-sm"
+                  ? "rounded-xl border border-[#EBEEF2] shadow-sm bg-radial-faq"
                   : "bg-white rounded-lg shadow-sm border border-gray-200"
               }`}
-              style={
-                isOpen(item.id)
-                  ? {
-                      background:
-                        "radial-gradient(140.68% 91% at 100% 100%, rgba(23, 140, 145, 0.64) 0%, rgba(252, 253, 253, 0.00) 100%), #FCFDFD",
-                    }
-                  : {}
-              }
+              // style={
+              //   isOpen(item.id)
+              //     ? {
+              //         background:
+              //           "radial-gradient(140.68% 91% at 100% 100%, rgba(23, 140, 145, 0.64) 0%, rgba(252, 253, 253, 0.00) 100%), #FCFDFD",
+              //       }
+              //     : {}
+              // }
             >
               <button
                 onClick={() => toggleItem(item.id)}
-                className="w-full px-6 py-5 text-left flex items-center justify-between  transition-colors duration-200 hover:bg-gray-50"
+                className="w-full px-6 py-5 text-left flex items-center justify-between  transition-colors duration-200 "
                 aria-expanded={isOpen(item.id)}
                 aria-controls={`faq-answer-${item.id}`}
               >
@@ -120,7 +120,7 @@ const FAQAccordion: React.FC = () => {
                 }`}
               >
                 <div className="px-6 pb-5">
-                  <div className="pt-2 border-t border-gray-100">
+                  <div className="pt-2 ">
                     <p className="text-gray-700 text-sm sm:text-base leading-relaxed mt-3">
                       {item.answer}
                     </p>

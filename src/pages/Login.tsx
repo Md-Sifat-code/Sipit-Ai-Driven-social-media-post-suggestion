@@ -2,12 +2,14 @@
 "use client";
 
 import { X } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 interface LoginProps {
   onClose: () => void;
 }
 
 export default function Login({ onClose }: LoginProps) {
+  const navigate = useNavigate();
   return (
     <div className="w-full max-w-md rounded-xl bg-white p-6 shadow-lg md:p-8">
       {/* CardHeader */}
@@ -97,6 +99,7 @@ export default function Login({ onClose }: LoginProps) {
         </div>
 
         <button
+          onClick={() => navigate("/dashboard/home")}
           style={{
             background: "linear-gradient(270deg, #3AADB2 0.23%, #0D777C 99.77%)",
           }}
