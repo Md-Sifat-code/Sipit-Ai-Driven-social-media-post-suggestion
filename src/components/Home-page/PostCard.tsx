@@ -1,5 +1,6 @@
 import React from "react";
-
+import profileImg from "../../assets/profile.png";
+import logo from "../../assets/logo.svg";
 interface Post {
   id: string;
   author: string;
@@ -57,7 +58,7 @@ const SocialPostsMarquee: React.FC = () => {
         <div className="flex items-center space-x-3">
           <div className="w-12 h-12 rounded-full overflow-hidden bg-gray-300">
             <img
-              src="../src/assets/profile.png"
+              src={profileImg}
               alt={post.author}
               className="w-full h-full object-cover"
             />
@@ -80,7 +81,7 @@ const SocialPostsMarquee: React.FC = () => {
 
       {/* Tags */}
       <div className="flex items-center space-x-3 mb-6">
-         <img className="h-8 sm:8 md:h-10 lg:h-10" src="../src/assets/logo.svg" alt="" />
+        <img className="h-8 sm:8 md:h-10 lg:h-10" src={logo} alt="" />
         <div className="border-2 border-teal-600 text-teal-600 px-4 py-1 rounded-full text-sm font-medium">
           {post.tag}
         </div>

@@ -1,5 +1,9 @@
 import React from "react";
-
+import how1 from '../../assets/how-1.svg';
+import start1 from '../../assets/Star1.svg';
+import howit2 from '../../assets/howit-2.svg';
+import how3 from '../../assets/how-3.svg';
+import howicon from '../../assets/howicon.svg';
 
 const HowItWorks: React.FC = () => {
   return (
@@ -16,9 +20,9 @@ const HowItWorks: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12 mb-16">
           {/* Step 1 */}
           <div className="flex flex-col items-center text-center">
-            <img src="../src/assets/how-1.svg" alt="" />
+            <img src={how1} alt="" />
             <div className="flex items-center gap-3 pt-2 mb-4">
-              <img src="../src/assets/Star1.svg" alt="" />
+              <img src={start1} alt="" />
 
               <h3 className="text-xl min-w-max font-semibold text-gray-900">
                 Paste your draft or write a quick thought
@@ -35,9 +39,9 @@ const HowItWorks: React.FC = () => {
           {/* Step 2 */}
           <div className="flex flex-col items-center text-center">
             {/* Processing Mockup */}
-            <img src="../src/assets/howit-2.svg" alt="" />
+            <img src={howit2} alt="" />
             <div className="flex items-center gap-3 pt-2 mb-4">
-              <img src="../src/assets/Star1.svg" alt="" />
+              <img src={start1} alt="" />
 
               <h3 className="text-xl font-semibold text-gray-900">
                 Let SIPT handle the hard part
@@ -54,9 +58,9 @@ const HowItWorks: React.FC = () => {
           {/* Step 3 */}
           <div className="flex flex-col items-center text-center">
             {/* Output Mockup */}
-            <img src="../src/assets/how-3.svg" alt="" />
+            <img src={how3} alt="" />
             <div className="flex items-center gap-3 pt-2 mb-4">
-              <img src="../src/assets/Star1.svg" alt="" />
+              <img src={start1} alt="" />
 
               <h3 className="text-xl font-semibold text-gray-900">
                 Get ready to share output in seconds
@@ -89,7 +93,7 @@ const HowItWorks: React.FC = () => {
             }}
             className="text-white px-8 py-3 rounded-lg font-semibold hover:bg-teal-200 transition-colors flex items-center gap-2 border border-teal-200"
           >
-            <img src="../src/assets/howicon.svg" alt="" />
+            <img src={howicon} alt="" />
             See Examples
           </button>
         </div>

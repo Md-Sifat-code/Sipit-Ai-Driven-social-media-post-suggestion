@@ -1,6 +1,6 @@
-"use client";
 
 import type React from "react";
+import getin from '../assets/getin.svg';
 import { useState } from "react";
 
 interface FormData {
@@ -121,7 +121,7 @@ const ContactForm: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Illustration Section */}
           <div className="order-2 lg:order-1">
-            <img src="../src/assets/getin.svg" alt="" />
+            <img src={getin} alt="" />
           </div>
 
           {/* Form Section */}

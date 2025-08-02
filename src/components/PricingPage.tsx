@@ -1,4 +1,6 @@
 import type React from "react";
+import verify from '../../assets/verify.svg';
+import verify2 from '../../assets/verify2.svg';
 
 interface Feature {
   text: string;
@@ -69,11 +71,11 @@ const PricingPage: React.FC = () => {
   const FeatureItem: React.FC<{ feature: Feature }> = ({ feature }) => (
     <div className="flex items-center gap-3 py-1">
       <div className="flex-shrink-0">
-        {feature.included ? (
-          <img src="../src/assets/verify.svg" alt="" />
-        ) : (
-          <img src="../src/assets/verify2.svg" alt="" />
-        )}
+    {feature.included ? (
+      <img src={verify} alt="" />
+    ) : (
+      <img src={verify2} alt="" />
+    )}
       </div>
       <span
         className={`text-sm ${

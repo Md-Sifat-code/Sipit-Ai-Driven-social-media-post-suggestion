@@ -4,6 +4,7 @@
 import React, { useState } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import Login from "../pages/Login";
+import logo from '../assets/logo.svg';
 import Register from "../pages/Register";
 
 
@@ -48,7 +49,7 @@ const Navbar: React.FC = () => {
                   <NavLink to="/">
                     <img
                       className="h-10 sm:12 md:h-12 lg:h-14"
-                      src="../src/assets/logo.svg"
+                      src={logo}
                       alt=""
                     />
                   </NavLink>

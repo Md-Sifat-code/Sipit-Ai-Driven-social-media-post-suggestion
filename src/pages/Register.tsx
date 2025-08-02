@@ -1,5 +1,7 @@
 
-"use client";
+import Line2 from '../assets/Line2.svg';
+import gogool from '../assets/gogool.svg';
+import apple from '../assets/apple.svg';
 
 import { X } from "lucide-react";
 
@@ -38,7 +40,7 @@ export default function Register({ onClose }: RegisterProps) {
         </p>
         <img
           className="w-40 ml-20 -mt-2"
-          src="../src/assets/Line2.svg"
+          src={Line2}
           alt=""
         />
       </div>
@@ -133,11 +135,11 @@ export default function Register({ onClose }: RegisterProps) {
         </div>
         <div className="space-y-3 ">
           <button className="w-full bg-gray-200 flex items-center justify-center space-x-2 rounded-md border border-gray-300  py-2 text-gray-700 hover:bg-gray-50 transition-colors">
-            <img src="../src/assets/gogool.svg" alt="" />
+            <img src={gogool} alt="" />
             <span>Continue with Google</span>
           </button>
           <button className="w-full bg-gray-200 flex items-center justify-center space-x-2 rounded-md border border-gray-300  py-2 text-gray-700 hover:bg-gray-50 transition-colors">
-            <img src="../src/assets/apple.svg" alt="" />
+            <img src={apple} alt="" />
             <span>Continue with Apple ID</span>
           </button>
         </div>
