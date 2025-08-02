@@ -24,7 +24,7 @@ const Banner: React.FC = () => {
 
   return (
     <div
-      className="relative  flex items-center justify-center border border-white overflow-hidden"
+      className="relative   flex items-center justify-center border border-white overflow-hidden"
       style={{ borderRadius: "0 0 80px 80px" }}
     >
       {/* ✅ Background Video */}
@@ -50,7 +50,7 @@ const Banner: React.FC = () => {
       ></div>
 
       {/* ✅ Foreground Content */}
-      <div className="relative z-20 w-full">
+      <div className="relative z-20 w-full ">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
           <div className="text-center">
             {/* Main Heading */}
