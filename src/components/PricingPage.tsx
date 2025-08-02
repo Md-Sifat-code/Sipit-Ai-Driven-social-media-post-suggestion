@@ -1,6 +1,6 @@
 import type React from "react";
-import verify from '../../assets/verify.svg';
-import verify2 from '../../assets/verify2.svg';
+import verify from '../assets/Verify.svg';
+import verify2 from '../assets/verify2.svg';
 
 interface Feature {
   text: string;
