@@ -1,4 +1,3 @@
-"use client";
 
 import type React from "react";
 import { useState } from "react";
@@ -86,14 +85,6 @@ const FAQAccordion: React.FC = () => {
                   ? "rounded-xl border border-[#EBEEF2] shadow-sm bg-radial-faq"
                   : "bg-white rounded-lg shadow-sm border border-gray-200"
               }`}
-              // style={
-              //   isOpen(item.id)
-              //     ? {
-              //         background:
-              //           "radial-gradient(140.68% 91% at 100% 100%, rgba(23, 140, 145, 0.64) 0%, rgba(252, 253, 253, 0.00) 100%), #FCFDFD",
-              //       }
-              //     : {}
-              // }
             >
               <button
                 onClick={() => toggleItem(item.id)}
