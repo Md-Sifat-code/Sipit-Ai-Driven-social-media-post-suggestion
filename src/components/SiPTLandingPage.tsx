@@ -1,6 +1,6 @@
 import type React from "react";
-import Star1 from '../../assets/Star1.svg';
-import WhySipt from '../../assets/WhySipt.svg';
+import Star1 from '../assets/Star1.svg';
+import WhySipt from '../assets/WhySipt.svg';
 
 interface FeatureProps {
   title: string;
