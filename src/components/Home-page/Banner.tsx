@@ -1,5 +1,10 @@
 import { useState } from "react";
-
+import logo from "../../assets/line.svg"
+import bgVideo from '../../assets/Sipt.mp4'
+import frame from '../../assets/Frame.svg'
+import fileImg from '../../assets/file.svg'
+import galimg from '../../assets/gellary.svg'
+import freeImg from '../../assets/Free.svg'
 const Banner: React.FC = () => {
   const [activeMode, setActiveMode] = useState("Pitch Polisher");
   const [postContent, setPostContent] = useState("");
@@ -24,7 +29,7 @@ const Banner: React.FC = () => {
 
   return (
     <div
-      className="relative  flex items-center justify-center border border-white overflow-hidden"
+      className="relative   flex items-center justify-center border border-white overflow-hidden"
       style={{ borderRadius: "0 0 80px 80px" }}
     >
       {/* ✅ Background Video */}
@@ -35,7 +40,7 @@ const Banner: React.FC = () => {
         playsInline
         className="absolute top-0 left-0 w-full h-full object-cover z-0"
       >
-        <source src="../src/assets/Sipt.mp4" type="video/mp4" />
+        <source src={bgVideo} type="video/mp4" />
         Your browser does not support the video tag.
       </video>
 
@@ -50,7 +55,7 @@ const Banner: React.FC = () => {
       ></div>
 
       {/* ✅ Foreground Content */}
-      <div className="relative z-20 w-full">
+      <div className="relative z-20 w-full ">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
           <div className="text-center">
             {/* Main Heading */}
@@ -72,7 +77,7 @@ const Banner: React.FC = () => {
               </h2>
               <img
                 className="absolute right-0  w-40 sm:w-44 md:w-48 lg:w-56 xl:w-64 ml-2"
-                src="../src/assets/line.svg"
+                src={logo}
                 alt="decorative line"
               />
             </div>
@@ -108,7 +113,7 @@ const Banner: React.FC = () => {
                       {mode === "Pitch Polisher" ? (
                         <span className="inline-flex items-center">
                           {mode}
-                          <img src="../src/assets/Frame.svg" alt="" />
+                          <img src={frame} alt="" />
                         </span>
                       ) : (
                         mode
@@ -140,7 +145,7 @@ const Banner: React.FC = () => {
                       {mode === "Pitch Polisher" ? (
                         <span className="inline-flex items-center">
                           {mode}
-                          <img src="../src/assets/Frame.svg" alt="" />
+                          <img src={frame} alt="" />
                         </span>
                       ) : (
                         mode
@@ -173,10 +178,10 @@ const Banner: React.FC = () => {
                   <div className="flex items-center justify-between p-4 sm:p-6 pt-0">
                     <div className="flex items-center space-x-2">
                       <button className="text-gray-400 hover:text-gray-600 transition-colors duration-200">
-                        <img src="../src/assets/file.svg" alt="" />
+                        <img src={fileImg} alt="" />
                       </button>
                       <button className="text-gray-400 hover:text-gray-600 transition-colors duration-200">
-                        <img src="../src/assets/gellary.svg" alt="" />
+                        <img src={galimg} alt="" />
                       </button>
                     </div>
 
@@ -189,7 +194,7 @@ const Banner: React.FC = () => {
                       className="bg-teal-600 hover:bg-teal-700 text-white px-6 sm:px-8 py-2 sm:py-3 rounded-xl font-medium transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center space-x-2"
                     >
                       <span>Try For Free</span>
-                      <img src="../src/assets/Free.svg" alt="" />
+                      <img src={freeImg} alt="" />
                     </button>
                   </div>
                 </div>

@@ -1,5 +1,6 @@
 import React from "react";
-
+import profileImg from "../../assets/profile.png";
+import logo from "../../assets/logo.svg";
 interface Post {
   id: string;
   author: string;
@@ -57,7 +58,7 @@ const SocialPostsMarquee: React.FC = () => {
         <div className="flex items-center space-x-3">
           <div className="w-12 h-12 rounded-full overflow-hidden bg-gray-300">
             <img
-              src="../src/assets/profile.png"
+              src={profileImg}
               alt={post.author}
               className="w-full h-full object-cover"
             />
@@ -80,7 +81,7 @@ const SocialPostsMarquee: React.FC = () => {
 
       {/* Tags */}
       <div className="flex items-center space-x-3 mb-6">
-         <img className="h-8 sm:8 md:h-10 lg:h-10" src="../src/assets/logo.svg" alt="" />
+        <img className="h-8 sm:8 md:h-10 lg:h-10" src={logo} alt="" />
         <div className="border-2 border-teal-600 text-teal-600 px-4 py-1 rounded-full text-sm font-medium">
           {post.tag}
         </div>
@@ -96,12 +97,12 @@ const SocialPostsMarquee: React.FC = () => {
   );
 
   return (
-    <div className=" bg-gradient-to-br from-gray-50 to-gray-100 lg:px-50 py-8">
+    <div className=" bg-gradient-to-b from-white via-gray-50 to-gray-50  lg:px-60 py-10">
       {/* Marquee Container */}
       <div className="relative overflow-hidden">
         {/* Gradient Overlays */}
-        <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-gray-50 to-transparent z-10 pointer-events-none" />
-        <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-gray-100 to-transparent z-10 pointer-events-none" />
+        <div className="absolute left-0 top-0 bottom-0 w-40 bg-gradient-to-r from-gray-50 to-transparent z-10 pointer-events-none" />
+        <div className="absolute right-0 top-0 bottom-0 w-40 bg-gradient-to-r from-transparent to-gray-50 z-10 pointer-events-none" />
 
         {/* Marquee Content */}
         <div className="flex animate-marquee hover:pause-marquee">

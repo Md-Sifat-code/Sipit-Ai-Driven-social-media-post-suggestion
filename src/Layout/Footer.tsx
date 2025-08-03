@@ -1,6 +1,8 @@
 
 
 import type React from "react"
+import logo from '../assets/logo.svg';
+import SiPT from '../assets/SiPT.svg';
 import { Mail, Facebook, Twitter, Linkedin, Instagram, MessageCircle } from "lucide-react"
 
 interface FooterLink {
@@ -68,7 +70,7 @@ const Footer: React.FC = () => {
           <div className="flex items-center gap-4">
             <img 
               className="h-10 sm:h-12 w-auto" 
-              src="../src/assets/logo.svg" 
+              src={logo} 
               alt="SiPT Logo" 
             />
             <div className="max-w-md">
@@ -170,7 +172,7 @@ const Footer: React.FC = () => {
 
       
          <div className="mt-12 flex justify-center">
-          <img className="max-w-full h-auto" src="../src/assets/SiPT.svg" alt="SiPT Brand Logo" />
+          <img className="max-w-full h-auto" src={SiPT} alt="SiPT Brand Logo" />
         </div>
       
 

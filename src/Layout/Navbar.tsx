@@ -4,6 +4,7 @@
 import React, { useState } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import Login from "../pages/Login";
+import logo from '../assets/logo.svg';
 import Register from "../pages/Register";
 
 
@@ -48,7 +49,7 @@ const Navbar: React.FC = () => {
                   <NavLink to="/">
                     <img
                       className="h-10 sm:12 md:h-12 lg:h-14"
-                      src="../src/assets/logo.svg"
+                      src={logo}
                       alt=""
                     />
                   </NavLink>
@@ -58,7 +59,7 @@ const Navbar: React.FC = () => {
 
             {/* Desktop Navigation */}
             <div className="hidden md:block">
-              <div className="ml-10 flex items-baseline space-x-8">
+              <div className="lg:ml-10 flex items-baseline lg:space-x-8">
                 {navItems.map((item) => (
                   <NavLink
                     key={item.name}

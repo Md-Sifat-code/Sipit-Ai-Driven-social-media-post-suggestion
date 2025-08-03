@@ -1,13 +1,18 @@
 
 "use client";
+import Line2 from '../assets/Line2.svg';
+import gogool from '../assets/gogool.svg';
+import apple from '../assets/apple.svg';
 
 import { X } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 interface LoginProps {
   onClose: () => void;
 }
 
 export default function Login({ onClose }: LoginProps) {
+  const navigate = useNavigate();
   return (
     <div className="w-full max-w-md rounded-xl bg-white p-6 shadow-lg md:p-8">
       {/* CardHeader */}
@@ -36,7 +41,7 @@ export default function Login({ onClose }: LoginProps) {
           </a>{" "}
           everyday
         </p>
-        <img className="w-40 ml-20 -mt-2" src="../src/assets/Line2.svg" alt="" />
+        <img className="w-40 ml-20 -mt-2" src={Line2} alt="" />
       </div>
 
       {/* CardContent */}
@@ -97,6 +102,7 @@ export default function Login({ onClose }: LoginProps) {
         </div>
 
         <button
+          onClick={() => navigate("/dashboard/home")}
           style={{
             background: "linear-gradient(270deg, #3AADB2 0.23%, #0D777C 99.77%)",
           }}
@@ -112,11 +118,11 @@ export default function Login({ onClose }: LoginProps) {
         </div>
         <div className="space-y-3 ">
           <button className="w-full bg-gray-200 flex items-center justify-center space-x-2 rounded-md border border-gray-300  py-2 text-gray-700 hover:bg-gray-50 transition-colors">
-            <img src="../src/assets/gogool.svg" alt="" />
+            <img src={gogool} alt="" />
             <span>Continue with Google</span>
           </button>
           <button className="w-full bg-gray-200 flex items-center justify-center space-x-2 rounded-md border border-gray-300  py-2 text-gray-700 hover:bg-gray-50 transition-colors">
-            <img src="../src/assets/apple.svg" alt="" />
+            <img src={apple} alt="" />
             <span>Continue with Apple ID</span>
           </button>
         </div>

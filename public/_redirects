@@ -1,0 +1,6 @@
+# Redirect from old page to new page
+/old-page     /new-page     301
+
+# Redirect all unmatched routes to index.html (for React Router SPA)
+# This is essential for React apps using client-side routing
+/*           /index.html    200

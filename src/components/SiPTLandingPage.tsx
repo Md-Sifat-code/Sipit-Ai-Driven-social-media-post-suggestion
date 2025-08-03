@@ -1,4 +1,6 @@
 import type React from "react";
+import Star1 from '../assets/Star1.svg';
+import WhySipt from '../assets/WhySipt.svg';
 
 interface FeatureProps {
   title: string;
@@ -7,7 +9,7 @@ interface FeatureProps {
 
 const Feature: React.FC<FeatureProps> = ({ title, description }) => (
   <div className="flex items-start gap-3 mb-6">
-    <img src="../src/assets/Star1.svg" alt="" />
+    <img src={Star1} alt="" />
     <div>
       <h3 className="font-semibold text-gray-900 mb-2 leading-tight">
         {title}
@@ -99,7 +101,7 @@ const SiPTLanding: React.FC = () => {
 
           {/* Right Illustration */}
           <div className="order-1 lg:order-2 flex justify-center">
-            <img src="../src/assets/WhySipt.svg" alt="" />
+            <img src={WhySipt} alt="" />
           </div>
         </div>
       </div>
